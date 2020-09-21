@@ -9,7 +9,6 @@ pipeline {
             }
             steps {
                 
-                sh 'apt-get update'
                 sh 'cd ~' 
                 sh 'virtualenv my-venv'
                 sh 'source my-venv/bin/activate'
