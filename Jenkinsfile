@@ -9,10 +9,9 @@ pipeline {
             }
             steps {
                 
-                sh 'cd ~' 
-                sh 'virtualenv my-venv'
-                sh 'source my-venv/bin/activate'
-                sh 'pip install flask'
+                sh 'python3 -m venv venv' 
+                sh '. venv/bin/activate'
+                sh 'pip3 install flask'
                 sh 'python -m py_compile sources/add2vals.py sources/calc.py'
             }
         }
