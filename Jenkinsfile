@@ -9,11 +9,9 @@ pipeline {
             }
             steps {    
                 
-                sh 'python -m venv venv'
-                sh 'ls' 
                 sh '. venv/bin/activate'
                 
-                // sh 'pip3 install -- user flask'
+                sh 'pip3 install -- user flask'
                 //sh 'python -m py_compile sources/add2vals.py sources/calc.py'
             }
         }
