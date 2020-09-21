@@ -3,6 +3,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
+                sh 'echo "user name: $_user"'
+                sh 'echo "user name ID (UID): $_uid"'
                 sh 'pip install flask'
             }
         }
