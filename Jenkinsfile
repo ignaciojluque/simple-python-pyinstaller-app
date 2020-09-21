@@ -8,7 +8,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'python -m pip install --user flask'
+                sh 'pip install --user flask'
                 sh 'apt-get update'
                 sh 'python sources/add2vals.py 2 3'
                 sh 'python -m py_compile sources/add2vals.py sources/calc.py'
