@@ -8,9 +8,12 @@ pipeline {
                 }
             }
             steps {
-                sh 'pip install --user flask'
+                
                 sh 'apt-get update'
-                sh 'python sources/add2vals.py 2 3'
+                sh 'cd ~' 
+                sh 'virtualenv my-venv'
+                sh 'source my-venv/bin/activate'
+                sh 'pip install flask'
                 sh 'python -m py_compile sources/add2vals.py sources/calc.py'
             }
         }
